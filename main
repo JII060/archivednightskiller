@@ -54,7 +54,7 @@ laggyearrape.MouseButton1Down:Connect(function()
 		[1] = game:GetService("Players").LocalPlayer.Character.LowerTorso,
 		[2] = game:GetService("Players").LocalPlayer.Character
 	}
-	while wait(0.7) do
+	while wait(0.35) do
 		game:GetService("ReplicatedStorage").RemoteEvents.CharacterJumpscares.FNAF1.Springtrap:FireServer(unpack(args))
 
 	end
