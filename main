@@ -1,0 +1,93 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local mainframe = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local laggyearrape = Instance.new("TextButton")
+local UICorner_2 = Instance.new("UICorner")
+
+local UICorner_3 = Instance.new("UICorner")
+local TextLabel = Instance.new("TextLabel")
+local title = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+mainframe.Name = "mainframe"
+mainframe.Parent = ScreenGui
+mainframe.BackgroundColor3 = Color3.fromRGB(38, 39, 43)
+mainframe.Position = UDim2.new(0.0118811727, 0, 0.691928029, 0)
+mainframe.Size = UDim2.new(0, 203, 0, 160)
+
+UICorner.CornerRadius = UDim.new(0, 6)
+UICorner.Parent = mainframe
+
+ScrollingFrame.Parent = mainframe
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BackgroundTransparency = 1.000
+ScrollingFrame.Position = UDim2.new(0.0295566507, 0, 0.0625, 0)
+ScrollingFrame.Size = UDim2.new(0, 191, 0, 139)
+ScrollingFrame.CanvasPosition = Vector2.new(0, 181)
+
+laggyearrape.Name = "laggyearrape"
+laggyearrape.Parent = ScrollingFrame
+laggyearrape.BackgroundColor3 = Color3.fromRGB(62, 63, 70)
+laggyearrape.Position = UDim2.new(0.130890056, 0, 0.0431654677, 0)
+laggyearrape.Size = UDim2.new(0, 134, 0, 44)
+laggyearrape.Font = Enum.Font.GothamBlack
+laggyearrape.Text = "Lag & Earrape"
+laggyearrape.TextColor3 = Color3.fromRGB(255, 255, 255)
+laggyearrape.TextScaled = true
+laggyearrape.TextSize = 14.000
+laggyearrape.TextWrapped = true
+laggyearrape.MouseButton1Down:Connect(function()
+
+
+	local args = {
+		[1] = game:GetService("Players").LocalPlayer.Character.LowerTorso,
+		[2] = game:GetService("Players").LocalPlayer.Character
+	}
+	while wait(0.7) do
+		game:GetService("ReplicatedStorage").RemoteEvents.CharacterJumpscares.FNAF1.Springtrap:FireServer(unpack(args))
+
+	end
+end)
+
+UICorner_2.Parent = laggyearrape
+
+
+
+
+
+TextLabel.Parent = ScrollingFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.Position = UDim2.new(0.0472303815, 0, 0.698174477, 0)
+TextLabel.Size = UDim2.new(0, 172, 0, 97)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "This GUI won't recieve any updates for a while, I'm making a script for FMR which allows you to unlock ALL characters, start a breadbear army, and much more!"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+
+title.Name = "title"
+title.Parent = mainframe
+title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title.BackgroundTransparency = 1.000
+title.Position = UDim2.new(0.201970458, 0, -0.443750024, 0)
+title.Size = UDim2.new(0, 120, 0, 42)
+title.Font = Enum.Font.SourceSans
+title.Text = "Thanks for using Archived Nights Killer V1.0"
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.TextScaled = true
+title.TextSize = 14.000
+title.TextTransparency = 0.400
+title.TextWrapped = true
